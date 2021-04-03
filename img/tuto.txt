@@ -1,0 +1,9 @@
+Quel techno choisir pour mon css ?
+
+GRID ou FLEX
+
+GRID + FLEX
+
+Construit tes blocs principaux avec GRID
+
+et je fini dans la finition avec FLEX
