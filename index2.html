@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- Import du fichier CSS style.css -->
+	<link rel="StyleSheet" href="style2.css" type="text/css" />
+	<!--Import icon font awesome-->
+	<script src="https://kit.fontawesome.com/3a89c9702f.js" crossorigin="anonymous"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<title>index2</title>
+
+</head>
+
+<body>
+
+	<div id="divDuBody" class="container">
+		<!-- supprimer class="container" si pas utilisé -->
+
+		<!-- Bloc 1 : Header -->
+		<header>
+			<FIGURE id="logo"><img src="img/logo/Reservia.svg" alt="logo Reservia"></figure>
+			<nav id="nav1">
+				<ul>
+					<li><a href="#h2Hébergements">Hébergements</a></li>
+				</ul>
+			</nav>
+			<nav id="nav2">
+				<ul>
+					<li><a href="#h2Activités">Activités</a></li>
+				</ul>
+			</nav>
+			<nav id="nav3">
+				<ul>
+					<li><a href="#" style="color:#0065FC;font-weight:bold">S'inscrire</a></li>
+				</ul>
+			</nav>
+		</header>
+
+		<!-- Bloc 2 : Main. C'est  la zone de Recherche. Elle est divisée  en 4 sections-->
+		<main>
+
+			<!-- 1ère section : L'introduction de la zone recherche -->
+			<section id="introRecherche">
+				<h1 id="h1Web">Trouvez votre hébergement pour des vacances de rêve</h1>
+				<h1 id="h1Mobile">Trouvez votre hébergement <br />pour des vacances de rêve</h1>
+				<p>En plein centre-ville ou en pleine nature</p>
+			</section>
+
+			<!-- 2ème section : La barre de recherche-->
+			<section id="barreDeRecherche">
+				<form action="#" method="post">
+					<label for="lieu"><i class="fas fa-map-marker-alt"></i></label>
+					<input type="search" placeholder="  Marseille, France" name="lieu" />
+					<button id="buttonWeb" class="buttonRecherche">Rechercher</button>
+					<button id="buttonMobile" class="buttonRecherche"><i class="fas fa-search"></i></button>
+				</form>
+			</section>
+
+			<!-- 3ème section : Les filtres -->
+			<section id="filtres"> Boutons filtres à venir
+
+			</section>
+
+			<!--4ème section : Résultat de la recherche en nombre de logements-->
+			<section id="résultat">
+				<p><span style="background-color: plum; color:#0065FC; border: 2px solid #f2f2f2;  ">
+						<i class="fas fa-info" style="width: 16px; font-size: 18px; padding-left: 9px; ; ;"></i></span>
+					<span style="margin-left: 10px;">Plus de 500 logements sont disponibles dans cette ville</span>
+				</p>
+			</section>
+
+		</main>
+
+		<!-- Bloc 3 : Propositions Hébergements -->
+
+		<section id="hébergements">
+			<h1>Hébergements à Marseille</h1>
+			<div id="blocCards">
+				<article class="cardHm">1</article>
+				<article class="cardHm">2</article>
+				<article class="cardHm">3 </article>
+				<article class="cardHm">4</article>
+				<article class="cardHm">5</article>
+				<article class="cardHm">6 </article>
+			</div>
+			<p>Afficher plus</p>
+		</section>
+
+		<aside>
+			<h1>Les plus populaires + icone</h1>
+			<article class="cardPopulaire">
+				<div class="photoPopulaire">p</div>
+				<div class="comPopulaire">c</div>
+			</article>
+			<article class="cardPopulaire">
+				<div class="photoPopulaire">p</div>
+				<div class="comPopulaire">c</div>
+			</article>
+			<article class="cardPopulaire">
+				<div class="photoPopulaire">p</div>
+				<div class="comPopulaire">c</div>
+			</article>
+		</aside>
+		<!-- Fin  bloc 3 : Propositions Hébergement -->
+
+		<!-- Bloc 4 : Propositions Activités -->
+
+		<section id="activités">Activités</section>
+
+		<!-- Fin   bloc Propositions Activités -->
+
+		<!-- Bloc 5 (the last!) : Footer  -->
+		<footer>
+			<div>
+				<h3>A propos</h3>
+				<ul>
+					<li><a href="#">Fonctionnement du site</a></li>
+					<li><a href="#">Conditions générales de ventes</a></li>
+					<li><a href="#">Données et confidentialité</a></li>
+				</ul>
+			</div>
+			<div>
+				<h3>Nos hébergements</h3>
+				<ul>
+					<li><a href="#"> Charte qualité </a></li>
+					<li><a href="#"> Soumettre votre hôtel </a></li>
+				</ul>
+			</div>
+			<div>
+				<h3>Assistance</h3>
+				<ul>
+					<li><a href="#">Centre d'aide</a></li>
+					<li><a href="#">Nous contacter</a></li>
+				</ul>
+			</div>
+		</footer>
+
+	</div> <!-- div fermante de <div id="divDuBody"> -->
+
+</body>
+
+</html>

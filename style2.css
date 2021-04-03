@@ -1,0 +1,314 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* Début format Web */
+
+body {
+  font-family: "Raleway", Times New Roman, Times, serif;
+  padding: 10px;
+}
+
+/* Début conteneur  de la <div id="grill"> représentant le body à diviser en blocs */
+#divDuBody {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 4fr 2fr;
+  grid-template-rows: 1fr 4fr 5fr 4fr 1fr;
+  grid-template-areas:
+    "header  header"
+    "main main"
+    "hébergements aside"
+    "activités activités"
+    "footer footer";
+}
+
+div.container {
+  border: solid black; /*aide visuelle*/
+}
+/* Fin conteneur <div id="grill"> représentant le body */
+
+/* Bloc Header  format Web */
+header {
+  grid-area: header;
+  display: grid;
+  grid-template-columns: 4fr repeat(3, 1fr);
+  grid-template-areas: "logo nav1 nav2 nav3";
+}
+
+#logo {
+  grid-area: logo;
+}
+
+#nav1 {
+  grid-area: nav1;
+}
+
+#nav2 {
+  grid-area: nav2;
+}
+
+#nav3 {
+  grid-area: nav3;
+}
+
+figure {
+  margin: 0;
+}
+
+header li {
+  list-style: none;
+  padding-right: 30px;
+  text-align: center;
+}
+
+header a {
+  text-decoration: none;
+  color: black;
+}
+
+/* menu nav au survol*/
+header nav:hover {
+  color: #0065fc;
+  border-top: solid #0065fc;
+}
+/* Fin du bloc Header  format Web */
+
+/* Bloc Main (zone Recherche)  format Web */
+main {
+  grid-area: main;
+  display: grid;
+  grid-template-rows: repeat(4, fr);
+  grid-template-areas:
+    "introRecherche"
+    "barreDeRecherche"
+    "filtres"
+    "résultat";
+}
+
+/* 1ère section (Introduction Recherche)  format Web */
+/* masquage titre h1 format mobile */
+#h1Mobile {
+  display: none;
+}
+/* Fin de 1ère section (Introduction Recherche)  format Web */
+
+/* 2ème section (Barre de recherche)  format Web  */
+form {
+  display: grid;
+  grid-template-columns: 40px 250px 100px 40px;
+  height: 45px;
+}
+
+label i {
+  padding-left: 13px;
+  padding-top: 13px;
+}
+
+label {
+  background-color: #f2f2f2;
+  border-radius: 10px 0 0 10px;
+}
+
+input {
+  border: solid #f2f2f2;
+  border-right: none;
+  font-weight: bold;
+}
+
+.buttonRecherche {
+  background-color: #0065fc;
+  border-radius: 0 10px 10px 0;
+  height: 100%;
+  border: solid #0065fc;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Masquage du bouton de recherche du format mobile */
+#buttonMobile {
+  display: none;
+}
+/* Fin 2ème section (Barre de recherche)  format Web */
+
+/* Début 3ème section (Filtres)  format Web */
+/* Fin 3ème section (Filtres)  format Web */
+section#filtres {
+  background-color: greenyellow;
+  height: 50px;
+}
+
+/* Fin du bloc Main (zone Recherche)  format Web */
+
+/* Bloc 3 : Propositions d'hébergements */
+
+/* Gros sous-bloc 3.1 (Section) : Hébergements */
+section#hébergements {
+  background-color: yellow;
+  grid-area: hébergements;
+  display: grid;
+  grid-template-rows: 1fr 6fr 1fr;
+  grid-template-areas:
+    "h1 "
+    "div"
+    "p ";
+}
+
+div#blocCards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 2;
+  grid-template-areas:
+    "article article article"
+    "article article article";
+  background-color: maroon;
+  row-gap: 25px;
+  column-gap: 25px;
+  text-align: center;
+}
+
+article.cardHm {
+  background-color: yellowgreen; /* aide visuelle */
+}
+/* Fin du gros sous-bloc 3.1(Section) : Hébergements */
+
+/* Petit sous-bloc 3.2 (Aside) : Les plus populaires */
+aside {
+  background-color: gray;
+  grid-area: aside;
+  display: grid;
+  grid-template-rows: 1fr repeat(3, 3fr);
+  grid-gap: 10px;
+}
+aside h1 {
+  margin-bottom: 0;
+}
+aside article {
+  background-color: blueviolet; /* aide visuelle */
+  grid-area: "cardPopulaire";
+  display: grid;
+  grid-template-columns: 2fr 4fr;
+}
+.cardPopulaire {
+  background-color: azure;
+}
+/* Fin du petit sous-bloc 3.2 (Aside): Les plus populaires */
+/* Fin du bloc 3 : Propositions Hébergements */
+
+/* Bloc 4 : Propositions Activités */
+section#activités {
+  background-color: pink;
+  grid-area: activités;
+}
+/* Fin bloc 4 : Propositions Activités */
+
+/* Fin bloc Main  format Web */
+
+/* Début bloc Footer  format Web*/
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  background-color: #f2f2f2;
+}
+
+footer h3 {
+  margin-left: 40px;
+}
+
+footer li {
+  margin-bottom: 10px;
+  list-style: none;
+  text-decoration: none;
+}
+
+footer a {
+  text-decoration: none;
+  color: #000;
+}
+/* Fin du bloc Footer  format Web*/
+
+/* FIn du format Web */
+
+/* Format Mobile */
+@media screen and (max-width: 619px) {
+  #divDuBody {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "header"
+      "main"
+      "aside"
+      "article1"
+      "article2"
+      "footer";
+  }
+
+  /* Bloc 1 : Header  format Mobile */
+  header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "logo nav3"
+      "nav1 nav2";
+    border-bottom: solid #f2f2f2;
+  }
+
+  #logo {
+    grid-area: logo;
+    /* padding-left: 20px; */
+  }
+
+  #nav1 {
+    grid-area: nav1;
+  }
+
+  #nav2 {
+    grid-area: nav2;
+  }
+
+  #nav3 {
+    grid-area: nav3;
+    padding-left: 70px;
+  }
+
+  header nav:hover {
+    color: #0065fc;
+    border-bottom: solid #0065fc;
+    border-top: none;
+  }
+  /* Fin du bloc 1 : Header  format Mobile */
+
+  /* Bloc 2 : Main  format Mobile */
+
+  /* 1ère section (Introduction recherche)  format Mobile*/
+  #h1Web {
+    display: none;
+  }
+
+  #h1Mobile {
+    display: block;
+  }
+  /* Fin 1ère section (Introduction recherche)  format Mobile */
+
+  /*  2ème section (Barre de recherche)  format Mobile */
+  #buttonMobile {
+    display: inline;
+    width: 45px;
+  }
+
+  #buttonWeb {
+    display: none;
+  }
+  /* Fin de 2ème section (Barre de recherche)  format Mobile */
+
+  /* Fin du bloc 2 : Main  format Mobile */
+
+  /* Bloc 5 : Footer  format Mobile */
+  footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(10, 1fr);
+  }
+  /* Fin du bloc 5 : Footer  format Mobile */
+}
+/* Fin du format Mobile */
